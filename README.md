@@ -1,8 +1,7 @@
 # A Vectorized Implementation of Multiple Linear, LASSO, and Ridge Regression Optimized Using Gradient Descent
 ## Program Information
-<!---
-Add information about how program is structured and how to run it here
--->
+LinReg.py contains a LinearRegressionModel class which has two methods: fit() and predict(). fit() takes as arguments the training X matrix, the training y vector, the method (linear, lasso, or ridge) which is by default set to linear, the regularization constant which is by default 0, the number of epochs before termination of gradient descent which is by default 50000, the coefficient vector update threshold at which to terminate gradient descent at which is by default 0.0001, and the learning rate which is by default 0.03. predict() takes as its sole argument a test X matrix. Improper arguments, such as X matrices and y vectors with incorrect dimensions, non-numeric elements, or an invalid "method" argument, are handled by outputting an error message and exiting the program. The main method implements a demo of the class and its functions on the Boston housing dataset.
+test.py contains some simple tests of the class to ensure that the code can handle erroneous and valid output as expected.
 ## Mathematics Behind the Models
 For multiple linear, LASSO, and ridge regression the aim is to construct a model which yields numerical outputs that minimize an error metric (typically sum of squared errors or mean squared error). The model can be defined as below:  
 <img src="https://latex.codecogs.com/png.latex?%5Cinline%20%5Chat%7B%5Cmathbf%7By%7D%7D%20%3D%20%5Cmathbf%7BX%7D%5Cmathbf%7Bb%7D">  
